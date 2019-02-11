@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HQPlay/HQList/HQListViewModel.swift"
+            timestampString = "568579704.260637"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "downloadCover(url:complete:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HQPlay.HQListViewModel.downloadCover(url: Swift.String, complete: (HQPlay.ImageResul&lt;Swift.Optional&lt;__ObjC.UIImage&gt;&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "HQPlay"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/henriquepereiradelima/Desktop/HQPlay/HQPlay/HQList/HQListViewModel.swift"
+                  timestampString = "565670655.964138"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "38">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (HQPlay.ServiceResult&lt;Swift.Optional&lt;Foundation.Data&gt;&gt;) -&gt; () in HQPlay.HQListViewModel.downloadCover(url: Swift.String, complete: (HQPlay.ImageResul&lt;Swift.Optional&lt;__ObjC.UIImage&gt;&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "HQPlay"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/henriquepereiradelima/Desktop/HQPlay/HQPlay/HQList/HQListViewModel.swift"
+                  timestampString = "565670655.967275"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "78">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HQPlay/Network/ConnectorRequest.swift"
+            timestampString = "565708658.961044"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "downloadHqCover(url:complete:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HQPlay.ConnectorRequest.downloadHqCover(url: Swift.String, complete: (HQPlay.ServiceResult&lt;Swift.Optional&lt;Foundation.Data&gt;&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "HQPlay"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/henriquepereiradelima/Desktop/HQPlay/HQPlay/Network/ConnectorRequest.swift"
+                  timestampString = "565670655.978081"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "64"
+                  endingLineNumber = "64"
+                  offsetFromSymbolStart = "37">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Foundation.Data&gt;) -&gt; () in HQPlay.ConnectorRequest.downloadHqCover(url: Swift.String, complete: (HQPlay.ServiceResult&lt;Swift.Optional&lt;Foundation.Data&gt;&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "HQPlay"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/henriquepereiradelima/Desktop/HQPlay/HQPlay/Network/ConnectorRequest.swift"
+                  timestampString = "565670655.980648"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "234">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HQPlay/Network/ConnectorRequest.swift"
+            timestampString = "565708658.966064"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "downloadHqCover(url:complete:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
