@@ -6,5 +6,6 @@ target 'HQPlay' do
   use_frameworks!
 
   pod 'Alamofire', '~> 4.7'
+  pod 'PromiseKit', '~> 6.8'
 
 end
