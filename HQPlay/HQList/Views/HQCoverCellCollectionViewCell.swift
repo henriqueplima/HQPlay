@@ -15,12 +15,11 @@ class HQCoverCellCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var lblDate : UILabel!
     
     
-    func setData(_ hq:HQ) {
-        
+    func setData(_ hq: HQListViewModel) {
+        cleanFields()
         self.lbTitle.text = hq.title
-        self.lblDate.text = "publish \(hq.publishDate())"
+        self.lblDate.text = hq.publishDate()
         self.configBorder()
-        
     }
     
     func configBorder(){
@@ -33,4 +32,9 @@ class HQCoverCellCollectionViewCell: UICollectionViewCell {
         self.imageViewCover.image = image
     }
     
+    func cleanFields() {
+        self.lbTitle.text = ""
+        self.lblDate.text = ""
+        self.imageViewCover.image = nil
+    }
 }

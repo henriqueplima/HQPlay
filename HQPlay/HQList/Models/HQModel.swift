@@ -17,18 +17,9 @@ struct  HQ : Decodable {
     var prices : [HQPrices]
     var thumbnail : HQThumbnail
     var image : Data?
-    
-    
-    func publishDate() -> String {
-        let formatter = DateFormatter()
-        formatter.locale = Locale.current
-        formatter.dateFormat = "MMMM yyyy"
-        if let date = formatter.date(from: dates[1].date) {
-            return formatter.string(from: date)
-        }
-        return formatter.string(from: Date())
+    var publishDate: String? {
+        return dates[1].date
     }
-    
 }
 
 struct HQThumbnail : Decodable {
