@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct  HQ : Decodable {
+class  HQ : Decodable {
     var title : String
     var resourceURI : String
     var pageCount : Int

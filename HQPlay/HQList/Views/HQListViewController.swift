@@ -50,16 +50,16 @@ extension HQListViewController: UICollectionViewDelegate, UICollectionViewDataSo
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: HQCoverCellCollectionViewCell.self), for: indexPath ) as! HQCoverCellCollectionViewCell
         let hq = self.hqViewModelList[indexPath.row]
+        
         cell.setData(hq)
 //        if hq.image == nil {
-//            self.hqBussiness.downloadCover(url: hq.thumbnail.fullPath) { (resultImage) in
+//            self.hqBussiness.downloadCover(url: hq.fullPath) { (resultImage) in
 //
 //                switch resultImage {
 //                case .Success(let dataOptional):
 //                    if let data = dataOptional {
 //                            if let image = UIImage.init(data: data){
 //                                DispatchQueue.main.async {
-//                                    hq.image = data
 //                                    cell.setImage(image: image)
 //                                }
 //                            }
@@ -71,7 +71,7 @@ extension HQListViewController: UICollectionViewDelegate, UICollectionViewDataSo
 //
 //            }
 //        } else {
-//            if let data = hq.image ,let image = UIImage.init(data: data){
+//            if let data = hq.imageData, let image = UIImage.init(data: data){
 //                cell.setImage(image: image)
 //            }
 //        }

@@ -10,31 +10,37 @@ import UIKit
 
 class HQCoverCellCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var imageViewCover : UIImageView!
-    @IBOutlet weak var lbTitle : UILabel!
-    @IBOutlet weak var lblDate : UILabel!
+    @IBOutlet weak var imageViewCover: ImageLoader!
+    @IBOutlet weak var lbTitle: UILabel!
+    @IBOutlet weak var lblDate: UILabel!
     
     
     func setData(_ hq: HQListViewModel) {
         cleanFields()
         self.lbTitle.text = hq.title
         self.lblDate.text = hq.publishDate()
+        self.imageViewCover.loadImage(url: hq.fullPath)
         self.configBorder()
     }
     
-    func configBorder(){
+    func configBorder() {
         self.layer.cornerRadius = 5
         self.layer.borderColor = UIColor.black.cgColor
         self.layer.borderWidth = 3
     }
     
-    func setImage(image:UIImage){
+    func setImage(image:UIImage) {
         self.imageViewCover.image = image
     }
     
     func cleanFields() {
         self.lbTitle.text = ""
         self.lblDate.text = ""
-        self.imageViewCover.image = nil
+        imageViewCover.restart()
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        cleanFields()
     }
 }

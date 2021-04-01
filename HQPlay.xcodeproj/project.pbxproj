@@ -25,6 +25,7 @@
 		AC757B3722276D3A005EE288 /* ListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC757B3622276D3A005EE288 /* ListRequest.swift */; };
 		F01677C09B054DABD2CB70F7 /* Pods_HQPlay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 665181CB23F837E0506C713C /* Pods_HQPlay.framework */; };
 		F72AD3B32607DDD7009B4C4F /* HQListBussiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72AD3B22607DDD7009B4C4F /* HQListBussiness.swift */; };
+		F7A5E3532615101200AA8040 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A5E3522615101200AA8040 /* ImageLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		AC757B3422276379005EE288 /* RequestConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestConnector.swift; sourceTree = "<group>"; };
 		AC757B3622276D3A005EE288 /* ListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRequest.swift; sourceTree = "<group>"; };
 		F72AD3B22607DDD7009B4C4F /* HQListBussiness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQListBussiness.swift; sourceTree = "<group>"; };
+		F7A5E3522615101200AA8040 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 			children = (
 				8E11791321B6F3F300815225 /* HQListViewController.swift */,
 				8E23100E21B745D300672BBA /* HQCoverCellCollectionViewCell.swift */,
+				F7A5E3522615101200AA8040 /* ImageLoader.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 			files = (
 				8E11790E21B6E9C500815225 /* ConnectorRequestProtocol.swift in Sources */,
 				8E11791921B7070500815225 /* HQListViewModel.swift in Sources */,
+				F7A5E3532615101200AA8040 /* ImageLoader.swift in Sources */,
 				8E1178FA21B6E96200815225 /* ViewController.swift in Sources */,
 				AC757B31222752F0005EE288 /* ConnectorAPI.swift in Sources */,
 				8E1178F821B6E96200815225 /* AppDelegate.swift in Sources */,

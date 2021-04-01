@@ -15,7 +15,12 @@ struct HQListViewModel {
     }
     
     private var hq: HQ
-    
+    var imageData: Data? {
+        return self.hq.image
+    }
+    var fullPath: String {
+        return hq.thumbnail.fullPath
+    }
     var image: UIImage?
     var title: String {
         return hq.title
