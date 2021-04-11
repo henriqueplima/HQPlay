@@ -15,7 +15,7 @@ enum ViewResult<T> {
 
 enum ImageResul<T> {
     case Success(T)
-    case Error()
+    case Error
     
     var isSuccess: Bool {
         switch self {
@@ -41,9 +41,9 @@ class HQListBussiness {
                     if let data = imageData {
                         return complete(.Success(data))
                     }
-                    return complete(.Error())
+                    return complete(.Error)
                 case .Error(_ , _):
-                    complete(.Error())
+                    complete(.Error)
             }
             
         }
