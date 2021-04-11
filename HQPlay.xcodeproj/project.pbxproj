@@ -25,6 +25,7 @@
 		AC757B3722276D3A005EE288 /* ListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC757B3622276D3A005EE288 /* ListRequest.swift */; };
 		F01677C09B054DABD2CB70F7 /* Pods_HQPlay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 665181CB23F837E0506C713C /* Pods_HQPlay.framework */; };
 		F72AD3B32607DDD7009B4C4F /* HQListBussiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72AD3B22607DDD7009B4C4F /* HQListBussiness.swift */; };
+		F7731BEC2622A213006DF35B /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7731BEB2622A213006DF35B /* LoadingView.swift */; };
 		F7A5E3532615101200AA8040 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A5E3522615101200AA8040 /* ImageLoader.swift */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,7 @@
 		AC757B3422276379005EE288 /* RequestConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestConnector.swift; sourceTree = "<group>"; };
 		AC757B3622276D3A005EE288 /* ListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRequest.swift; sourceTree = "<group>"; };
 		F72AD3B22607DDD7009B4C4F /* HQListBussiness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQListBussiness.swift; sourceTree = "<group>"; };
+		F7731BEB2622A213006DF35B /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		F7A5E3522615101200AA8040 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -95,6 +97,7 @@
 		8E1178F621B6E96200815225 /* HQPlay */ = {
 			isa = PBXGroup;
 			children = (
+				F7731BEE2622A2EC006DF35B /* Componentes */,
 				8E11791121B6F32F00815225 /* HQList */,
 				8E11790C21B6E97200815225 /* Network */,
 				8E1178F721B6E96200815225 /* AppDelegate.swift */,
@@ -137,7 +140,6 @@
 			children = (
 				8E11791321B6F3F300815225 /* HQListViewController.swift */,
 				8E23100E21B745D300672BBA /* HQCoverCellCollectionViewCell.swift */,
-				F7A5E3522615101200AA8040 /* ImageLoader.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -157,6 +159,15 @@
 				8AD3A3AA200E4E3EFEC5449A /* Pods-HQPlay.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		F7731BEE2622A2EC006DF35B /* Componentes */ = {
+			isa = PBXGroup;
+			children = (
+				F7731BEB2622A213006DF35B /* LoadingView.swift */,
+				F7A5E3522615101200AA8040 /* ImageLoader.swift */,
+			);
+			path = Componentes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,6 +288,7 @@
 				F7A5E3532615101200AA8040 /* ImageLoader.swift in Sources */,
 				8E1178FA21B6E96200815225 /* ViewController.swift in Sources */,
 				AC757B31222752F0005EE288 /* ConnectorAPI.swift in Sources */,
+				F7731BEC2622A213006DF35B /* LoadingView.swift in Sources */,
 				8E1178F821B6E96200815225 /* AppDelegate.swift in Sources */,
 				8E11791021B6EDB100815225 /* ConnectorRequest.swift in Sources */,
 				AC757B3722276D3A005EE288 /* ListRequest.swift in Sources */,

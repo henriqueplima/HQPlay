@@ -14,7 +14,6 @@ class HQCoverCellCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var lbTitle: UILabel!
     @IBOutlet weak var lblDate: UILabel!
     
-    
     func setData(_ hq: HQListViewModel) {
         cleanFields()
         self.lbTitle.text = hq.title

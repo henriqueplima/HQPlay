@@ -23,16 +23,18 @@ class HQListViewController: UIViewController {
         
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
+        LoadingView.shared.show()
 
         self.hqBussiness.fetchHQList { (listHqResponse) in
             
-            switch listHqResponse{
+            switch listHqResponse {
                 case .Success(let hqs):
                     self.hqViewModelList = hqs
                 
                 case .Error(let texto):
                     debugPrint(texto)
             }
+            LoadingView.shared.close()
         }
     }
 }
@@ -50,33 +52,7 @@ extension HQListViewController: UICollectionViewDelegate, UICollectionViewDataSo
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: HQCoverCellCollectionViewCell.self), for: indexPath ) as! HQCoverCellCollectionViewCell
         let hq = self.hqViewModelList[indexPath.row]
-        
         cell.setData(hq)
-//        if hq.image == nil {
-//            self.hqBussiness.downloadCover(url: hq.fullPath) { (resultImage) in
-//
-//                switch resultImage {
-//                case .Success(let dataOptional):
-//                    if let data = dataOptional {
-//                            if let image = UIImage.init(data: data){
-//                                DispatchQueue.main.async {
-//                                    cell.setImage(image: image)
-//                                }
-//                            }
-//                    }
-//                    return
-//                case .Error():
-//                    debugPrint("erro ao carregar imagem")
-//                }
-//
-//            }
-//        } else {
-//            if let data = hq.imageData, let image = UIImage.init(data: data){
-//                cell.setImage(image: image)
-//            }
-//        }
-        
-        
         return cell
 
     }
@@ -99,22 +75,18 @@ extension HQListViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        let size = _isFirstLoading ? loadingCellSize : characterCellSize
-        //return CGSize(width: size, height: size)
         return CGSize(width: 180, height: 220)
     }
     
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         referenceSizeForHeaderInSection section: Int) -> CGSize {
-//        return CGSize(width: loadingCellSize, height: 32)
         return CGSize(width: 3, height: 3)
     }
     
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         referenceSizeForFooterInSection section: Int) -> CGSize {
-//        return CGSize(width: loadingCellSize, height: 10)
         return CGSize(width: 3, height: 3)
     }
     

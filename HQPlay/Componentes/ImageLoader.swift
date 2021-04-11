@@ -11,7 +11,6 @@ import UIKit
 class ImageLoader: UIImageView {
 
     var activity: UIActivityIndicatorView = UIActivityIndicatorView()
-    private let cache = NSCache<NSString, NSData>()
     private let connector: ConnectorRequestProtocol = ConnectorRequest.shared
     private let endPoint = "comics"
     
