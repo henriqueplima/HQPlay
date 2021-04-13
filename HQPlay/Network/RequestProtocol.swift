@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Alamofire
 
 public enum HTTPMethod2: String {
     case get = "GET"
@@ -14,9 +15,14 @@ public enum HTTPMethod2: String {
 }
 
 protocol RequestProtocol {
-    
-    var header : [String:String]? {get}
-    var parameters : [String: Any]? {get}
-    var endPoint : String? {get}
-    var httpMethod : HTTPMethod2? {get}
+    var parameters: [String: Any]? { get }
+    var endPoint: String { get }
+    var httpMethod: HTTPMethod { get }
+    var header: [String: String] { get }
+}
+
+extension RequestProtocol {
+    var header: [String: String] {
+        [:]
+    }
 }

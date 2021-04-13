@@ -8,6 +8,20 @@
 
 import UIKit
 
+protocol BaseControllerProtocol: class {
+    func genericError()
+}
+
+protocol HQListControllerProtocol: BaseControllerProtocol {
+    func successHQList(list: [HQListViewModel])
+}
+
+extension BaseControllerProtocol where Self: UIViewController {
+    func genericError() {
+        LoadingView.shared.close()
+    }
+}
+
 class HQListViewController: UIViewController {
     
     @IBOutlet weak var collectionView : UICollectionView!
@@ -21,28 +35,23 @@ class HQListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.collectionView.delegate = self
-        self.collectionView.dataSource = self
-        LoadingView.shared.show()
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        hqBussiness.viewController = self
+        hqBussiness.fetchHQList()
+    }
+}
 
-        self.hqBussiness.fetchHQList { (listHqResponse) in
-            
-            switch listHqResponse {
-                case .Success(let hqs):
-                    self.hqViewModelList = hqs
-                
-                case .Error(let texto):
-                    debugPrint(texto)
-            }
-            LoadingView.shared.close()
-        }
+extension HQListViewController: HQListControllerProtocol {
+
+    func successHQList(list: [HQListViewModel]) {
+        self.hqViewModelList = list
     }
 }
 
 // MARK: UICollectionViewDataSource
 
 extension HQListViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-    
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.hqViewModelList.count

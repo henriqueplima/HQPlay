@@ -21,26 +21,26 @@ class ConnectorAPI {
         return URLRequest(url: url)
     }
     
-    func callAPI<T:Decodable>(request:RequestConnector, closure:@escaping (_ meuHQ:T) -> Void) {
-        var url = mountURL(request.endPoint!)
-        url.timeoutInterval = self.timeout
-        url.httpMethod = request.httpMethod?.rawValue
-        url.allHTTPHeaderFields = request.header
-        if let parameters = request.parameters {
-                url.httpBody = try? JSONSerialization.data(withJSONObject: parameters, options: .prettyPrinted)
-        }
-    
-        URLSession.shared.dataTask(with: url) { (responseData, httpResponse, error) in
-            
-            // TODO
-            
-            if let data = responseData {
-                if let objectData = try? JSONDecoder().decode(T.self, from: data) {
-                    closure(objectData)
-                }
-            }
-        }
-    }
+//    func callAPI<T:Decodable>(request:RequestConnector, closure:@escaping (_ meuHQ:T) -> Void) {
+//        var url = mountURL(request.endPoint!)
+//        url.timeoutInterval = self.timeout
+//        url.httpMethod = request.httpMethod?.rawValue
+//        url.allHTTPHeaderFields = request.header
+//        if let parameters = request.parameters {
+//                url.httpBody = try? JSONSerialization.data(withJSONObject: parameters, options: .prettyPrinted)
+//        }
+//    
+//        URLSession.shared.dataTask(with: url) { (responseData, httpResponse, error) in
+//            
+//            // TODO
+//            
+//            if let data = responseData {
+//                if let objectData = try? JSONDecoder().decode(T.self, from: data) {
+//                    closure(objectData)
+//                }
+//            }
+//        }
+//    }
     
     
 }

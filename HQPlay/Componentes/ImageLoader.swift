@@ -45,7 +45,7 @@ class ImageLoader: UIImageView {
         connector.downloadHqCover(url: url) { (responseData) in
             
             switch responseData {
-                case .Success(let imageData, _):
+                case .Success(let imageData):
                     if let data = imageData, let image = UIImage.init(data: data) {
                         self.setImage(image)
                     }

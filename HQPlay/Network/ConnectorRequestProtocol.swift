@@ -10,23 +10,18 @@ import UIKit
 import Alamofire
 
 enum ServiceResult<T> {
-    case Success(T, Int)
+    case Success(T)
     case Error(String, Int?)
 }
 
 protocol ConnectorRequestProtocol {
     
-    var baseURL : String {get}
-    var apiKey : String {get}
-    var hashString : String {get}
-    var timeStamp : String {get}
+    var baseURL: String { get }
+    var apiKey: String { get }
+    var hashString: String { get }
+    var timeStamp: String { get }
     
-    func request(
-        endPoint: String,
-        method: HTTPMethod,
-        parameters: Parameters?,
-        complete: @escaping ( ServiceResult<Data?> ) -> Void )
-    
+    func request(_ request: RequestProtocol, complete: @escaping ( ServiceResult<Data> ) -> Void )
     func downloadHqCover(url:String, complete:@escaping (ServiceResult<Data?>) -> Void)
 }
 
